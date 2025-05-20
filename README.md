@@ -12,7 +12,7 @@
 * **Existing standard agentic system**
   * `mode = base`: the standard ReAct-style agentic system that operates iteratively, deciding at each step whether to provide an answer or initiate a new reasoning action, which may include interactions with external tools
 * **Existing reflection system**
-  * `mode = log_cheatsheet`: an implementation of <a href="https://arxiv.org/pdf/2504.07952">Dynamic Cheatsheet</a>
+  * `mode = log_cheatsheet`: an implementation of <a href="https://arxiv.org/abs/2504.07952">Dynamic Cheatsheet</a>
 * **Existing KV cache system**
   * `mode = log_kv_last_as_context`: an implementation of <a href="https://arxiv.org/abs/2409.15355">Block Attention</a> that encodes the last model response and stores the KV values corresponding to the tokens in that response
 * **Ours: Log-augmented generation framework**
@@ -61,7 +61,7 @@ data/
     ...
 ```
 
-* `dev_train.json` and `dev_test.json` were constructed by doing a random 70/30 split from `dev.json`. The code can be found in `dataset.py`
+* `dev_train.json` and `dev_test.json` were constructed by doing a random 70/30 split on `dev.json`. The code can be found in `dataset.py`
 
 #### Compute embeddings
 
@@ -112,7 +112,7 @@ python agentic.py -m log_kv -d dataset_name -p partition_index
 
 #### Work in progress
 
-- [ ] Implement dynamic log store construction to build the log store on-the-fly rather than relying on a predefined split
+- [ ] Implement dynamic log store construction to build the log store on-the-fly rather than relying on a pre-defined split
 - [ ] Support more open-source models
 
 ## Contact
