@@ -272,6 +272,6 @@ if __name__ == '__main__':
   # choose one encode-storage strategy from below
   # default is store_reasoning_offline(args.dataset, last_num=1)
   store_reasoning_offline(args.dataset, last_num=1)
-  store_reasoning_last_as_context(args.dataset)
-  store_reasoning_all(args.dataset)
-  store_reasoning_last_action(args.dataset)
+  # store_reasoning_last_as_context(args.dataset)
+  # store_reasoning_all(args.dataset)
+  # store_reasoning_last_action(args.dataset)

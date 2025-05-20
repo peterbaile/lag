@@ -342,7 +342,7 @@ if __name__ == '__main__':
     fn = f'./data/{dataset}/preds/{mode}_l{NUM_LOGS}'
   
   # run inference
-  execute(dataset, model_name, args.partition, fn, mode, dynamic_store=False, train=False)
+  execute(dataset, model_name, args.partition, fn, mode, dynamic_store=False, train=True)
 
   # merge inference outputs
   # merge(num_partitions, f'./data/{dataset}/preds/base', 'json')
