@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J696KH33YJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J696KH33YJ');
+  </script>
+  
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <!-- <meta name="description" content="DESCRIPTION META TAG"> -->
+  <meta property="og:title" content="LAG: Log-augmented generation"/>
+  <!-- <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/> -->
+  <meta property="og:url" content="https://peterbaile.github.io/lag/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/recycle.png" />
+  <!-- <meta property="og:image:width" content="1200"/> -->
+  <!-- <meta property="og:image:height" content="630"/> -->
+
+
+  <meta name="twitter:title" content="LAG: Log-augmented generation">
+  <!-- <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/recycle.png">
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LAG: Log-augmented generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/recycle.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Log-augmented generation:<br/>Scaling Test-Time Reasoning with Reusable Computation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://peterbaile.github.io/" target="_blank">Peter Baile Chen</a><sup>1</sup>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://yizhang.io/" target="_blank">Yi Zhang</a><sup>2</sup>,
+                </span>
+                  
+                <span class="author-block">
+                  <a href="https://www.cis.upenn.edu/~danroth/" target="_blank">Dan Roth</a><sup>3</sup>,
+                </span>
+                
+                <span class="author-block">
+                  <a href="https://db.csail.mit.edu/madden/" target="_blank">Samuel Madden</a><sup>1</sup>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://www.mit.edu/~jda/" target="_blank">Jacob Andreas</a><sup>1</sup>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://people.csail.mit.edu/michjc/" target="_blank">Michael Cafarella</a><sup>1</sup>
+                </span>
+            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>MIT, <sup>2</sup>AWS AI, <sup>3</sup>University of Pennsylvania</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="#" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>Paper (coming soon)</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/peterbaile/lag" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="column" style="padding:0.25rem;">
+    <h2 class="subtitle">
+      While humans naturally learn and adapt from past experiences, large language models (LLMs) and their agentic counterparts struggle to retain reasoning from previous tasks and apply them in future contexts.
+      <br />
+      To address this limitation, we propose a novel framework,
+      <b><i>log-augmented generation</i></b> directly reuses prior computation and reasoning from past logs at test time to enhance model's ability to learn from previous tasks and perform better on new, unseen challenges, all while keeping the system efficient and scalable.
+      <!-- Specifically, our system represents task logs using key-value (KV) caches, encoding the full reasoning context of prior tasks while storing KV caches for only a selected subset of tokens. When a new task arises, LAG retrieves the KV values from relevant logs to augment generation. -->
+      <div class="has-text-centered" style="margin-top: 2rem;">
+        <img src="./static/images/overview.png" style="width: 80%;" />
+      </div>
+    </h2>
+  </div>
+</div>
+  <!-- </div> -->
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Summary</h2> -->
+        <div class="content has-text-justified">
+          <p><b>Models handle tasks independently</b></p>
+          <ul>
+          <li>
+            Learning from past experience is highly valuable—a skill that humans naturally possess but large language models (LLMs) do not have by default.
+          </li>
+          <li>
+            When models process the two questions sequentially, they handle them independently without retaining memory of the previous task, which prevents them from recognizing the connection and reusing reasoning.
+          </li>
+          </ul>
+          
+          <p><b>Log-augmented generation</b></p>
+          <ul>
+            <li>We propose log-augmented generation (LAG), a framework that directly reuses prior computation and reasoning from past logs at inference time.</li>
+            <li>
+              We represent logs using KV values corresponding to a subset of tokens in past reasoning traces to represent the full reasoning context—reducing size while enabling context-dependent interpretation.
+          </li>
+          </ul>
+          
+          <div class="has-text-centered" style="margin: 2rem 0;">
+            <img src="./static/images/kv.png" />
+          </div>
+
+          <p><b>Performance of <i>LAG</i></b></b></p>
+          <ul>
+           <li>
+            We evaluated LAG on four knowledge- and reasoning-intensive datasets (Musique, 2WikiMultiHop, GPQA, and MMLU-Pro), and found that our method significantly outperforms standard agentic systems without log usage and existing reflection and KV caching techniques, achieving superior effectiveness and efficiency.
+           </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="container">
+  </div>
+</section> -->
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{chen2024mdcr,
+  title={MDCR: A Dataset for Multi-Document Conditional Reasoning},
+  author={Chen, Peter Baile and Zhang, Yi and Liu, Chunwei and Gupta, Sejal and Kim, Yoon and Cafarella, Michael},
+  journal={arXiv preprint arXiv:2406.11784},
+  year={2024}
+}</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
